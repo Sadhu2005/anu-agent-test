@@ -25,3 +25,7 @@ weights/
 node_modules/
 .idea/
 .vscode/
+
+# ANU runtime scratch
+.anu-changes.json
+AUTONOMY_PROGRESS.md

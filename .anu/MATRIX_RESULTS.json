@@ -1,0 +1,113 @@
+{
+  "ok": true,
+  "root": "/srv/anu/workspace/projects/anu-agent-test",
+  "results": [
+    {
+      "layer": "unit",
+      "status": "PASS",
+      "reason": "exit_0",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 3 tests in 0.000s\n\nOK\n",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/anu/workspace/projects/anu-agent-test/tests/unit",
+        "-q"
+      ]
+    },
+    {
+      "layer": "integration",
+      "status": "PASS",
+      "reason": "exit_0",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/anu/workspace/projects/anu-agent-test/tests/integration",
+        "-q"
+      ]
+    },
+    {
+      "layer": "functional",
+      "status": "PASS",
+      "reason": "exit_0",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/anu/workspace/projects/anu-agent-test/tests/functional",
+        "-q"
+      ]
+    },
+    {
+      "layer": "e2e",
+      "status": "PASS",
+      "reason": "exit_0",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/anu/workspace/projects/anu-agent-test/tests/e2e",
+        "-q"
+      ]
+    },
+    {
+      "layer": "regression",
+      "status": "PASS",
+      "reason": "exit_0",
+      "exit_code": 0,
+      "stdout_tail": "",
+      "stderr_tail": "----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "argv": [
+        "/usr/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/srv/anu/workspace/projects/anu-agent-test/tests/regression",
+        "-q"
+      ]
+    }
+  ],
+  "passed": [
+    "unit",
+    "integration",
+    "functional",
+    "e2e",
+    "regression"
+  ],
+  "failed": [],
+  "skipped": [],
+  "summary": {
+    "pass": 5,
+    "fail": 0,
+    "skip": 0
+  },
+  "detected_at": "2026-10-21T10:48:16.630001+00:00",
+  "ci_hints": [
+    "python -m unittest discover -s tests/unit -q",
+    "python -m unittest discover -s tests/integration -q",
+    "python -m unittest discover -s tests/functional -q",
+    "python -m unittest discover -s tests/e2e -q",
+    "python -m unittest discover -s tests/regression -q"
+  ]
+}
