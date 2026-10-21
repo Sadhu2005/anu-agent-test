@@ -12,8 +12,9 @@ from labapp import greet
 class TestGreetFunctional(unittest.TestCase):
     def test_api_contract(self):
         out = greet("lab")
-        self.assertTrue(out.startswith("hello,"))
+        self.assertTrue(out.startswith("Hello,"))
         self.assertIn("lab", out)
+        self.assertTrue(out.endswith("!"))
 
 
 if __name__ == "__main__":

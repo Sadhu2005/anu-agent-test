@@ -1,19 +1,15 @@
 import unittest
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
 from labapp import greet
 
 
 class TestGreet(unittest.TestCase):
-    def test_default(self):
-        self.assertEqual(greet(), "hello, world")
+    def test_greet_default(self):
+        self.assertEqual(greet(), "Hello, world!")
 
-    def test_name(self):
-        self.assertEqual(greet("anu"), "hello, anu")
+    def test_greet_name(self):
+        self.assertEqual(greet("Ada"), "Hello, Ada!")
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
