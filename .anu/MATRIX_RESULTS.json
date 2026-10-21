@@ -102,7 +102,7 @@
     "fail": 0,
     "skip": 0
   },
-  "detected_at": "2026-10-21T10:52:43.636800+00:00",
+  "detected_at": "2026-10-21T10:52:48.598550+00:00",
   "ci_hints": [
     "python -m unittest discover -s tests/unit -q",
     "python -m unittest discover -s tests/integration -q",
