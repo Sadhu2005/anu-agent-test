@@ -1,0 +1,2 @@
+# Runtime deps for the lab app (keep minimal).
+# Add packages only when a goal requires them.

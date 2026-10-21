@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main, "agent/**"]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Unit + integration + functional + e2e + regression
+        run: |
+          export PYTHONPATH=src
+          python -m unittest discover -s tests/unit -q
+          python -m unittest discover -s tests/integration -q
+          python -m unittest discover -s tests/functional -q
+          python -m unittest discover -s tests/e2e -q
+          python -m unittest discover -s tests/regression -q
+      - name: Secret scan (basic)
+        run: |
+          if grep -RInE '(ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|BEGIN (RSA |OPENSSH )?PRIVATE KEY)' --exclude-dir=.git --exclude-dir=.github .; then
+            echo "Possible secret found" >&2
+            exit 1
+          fi
+          echo "secret scan ok"
