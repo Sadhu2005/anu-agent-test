@@ -11,7 +11,7 @@ from labapp import greet
 
 class TestRegressionBaseline(unittest.TestCase):
     def test_world_still_works(self):
-        self.assertEqual(greet(), "hello, world")
+        self.assertEqual(greet(), "Hello, world!")
 
 
 if __name__ == "__main__":
